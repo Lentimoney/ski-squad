@@ -338,7 +338,7 @@
         let obstacles = [];
         let snowParticles = [];
         let sideElements = [];
-        let gameSpeed = 1.2;
+        let gameSpeed = 1.5;
         let animationId;
         let touchingLeft = false;
         let touchingRight = false;
@@ -391,7 +391,7 @@
             snowParticles = [];
             sideElements = [];
             score = 0;
-            gameSpeed = 1.2;
+            gameSpeed = 1.5;
             gameRunning = true;
             specialMode = null;
             specialTimer = 0;
@@ -1330,11 +1330,11 @@
                 }
 
                 score += gameSpeed * 0.5;
-                gameSpeed = Math.min(2.8, 1.2 + score * 0.0005);
+                gameSpeed = Math.min(3.2, 1.5 + score * 0.0006);
             }
 
             document.getElementById('score-display').textContent = `${Math.floor(score)}m`;
-            document.getElementById('speed-fill').style.width = `${(gameSpeed / 2.8) * 100}%`;
+            document.getElementById('speed-fill').style.width = `${(gameSpeed / 3.2) * 100}%`;
         }
 
         function gameLoop() {
